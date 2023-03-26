@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Página Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Agrega el enlace al archivo CSS de Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <!-- Agrega el enlace al archivo del Web App Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    /* Estilos generales */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: sans-serif;
+      background-color: #7d8991;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    /* Estilos para la imagen de perfil */
+		.esfera {
+			width: 200px;
+			height: 200px;
+			border-radius: 90%;
+			background-color: #000000;
+			box-shadow: inset 0 0 0 50px #070707;
+			overflow: hidden;
+		}
+		.esfera video {
+			width: 100%;
+			height: auto;
+			border-radius: 30%;
+			object-fit: cover;
+		}
+    
+    /* Estilos para los iconos de las redes sociales */
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      margin: 0 1rem;
+      font-size: 2.5rem;
+    }
+    
+    a {
+      color: #fc0000;
+      text-decoration: none;
+    }
+    
+      /* Estilos de los iconos de las redes sociales */
+      
+      .fa-instagram {
+      color: #E1306C;
+    }
+    
+    .fa-facebook {
+      color: #0050fc;
+    }
+    
+    .fa-twitter {
+      color: #009afa;
+    }
+    
+    .fa-youtube {
+      color: #FF0000;
+    }
+    
+    .fa-whatsapp {
+      color: #25D366;
+    }
+    
+    .fa-tiktok {
+      color: #000000;
+    }
+
+    a:hover {
+      color: #000000;
+    }
+  </style>
+  <!-- Agrega tu código de JavaScript aquí -->
+  <script>
+    function toggleSection() {
+      var section = document.getElementById("mi-seccion");
+      if (section.style.display === "none") {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>ADRIAN GAMER</h1>
+  
+	<!-- Aquí se mostrará la imagen -->
+
+	<div class="esfera">
+		<video autoplay loop muted>
+			<source src="ita.mp4" type="video/mp4">
+			Tu navegador no soporta el elemento de video.
+		</video>
+	</div>
+
+
+    <script>
+
+		// Define un array con las rutas de las imágenes
+		const imagenesPerfil = [
+			"ruta/imagen1.jpg",
+			"ruta/imagen2.jpg"
+		];
+
+		// Crea una variable contador para llevar la cuenta de las veces que se ha cambiado la imagen
+		let contador = 0;
+
+		// Crea una función para cambiar la imagen de perfil cada segundo
+		function cambiarImagenPerfil() {
+			const imgPerfil = document.getElementById("profile-img");
+			imgPerfil.src = imagenesPerfil[contador];
+
+			// Aumenta el contador en 1 y si llega al final del arreglo, vuelve al inicio
+			contador++;
+			if (contador >= imagenesPerfil.length) {
+				contador = 0;
+			}
+		}
+
+		// Llama a la función cada segundo en un bucle infinito
+		setInterval(cambiarImagenPerfil, 2000);
+
+	</script>
+
+</body>
+</html>
+  <!-- Agrega los enlaces a las redes sociales -->
+  <ul>
+    <li><a href="https://instagram.com/adr1an_gamer?igshid=ZDdkNTZiNTM="><i class="fab fa-instagram"></i></a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=100089181823006"><i class="fab fa-facebook"></i></a></li>
+    <li><a href="https://twitter.com/c4_c095th?s=09"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="https://www.youtube.com/channel/UCSPAD7eLBnPdNEbFO4JM3HQ"><i class="fab fa-youtube"></i></a></li>
+    <li><a href="https://chat.whatsapp.com/KwPQDrho9MMFFCmfwuPb1Y"><i class="fab fa-whatsapp"></i></a></li>
+    <li><a href="https://www.tiktok.com/@adrian.bots?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a></li>
+  </ul>
+</body>
+</html>
